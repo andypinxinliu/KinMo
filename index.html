@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="KinMo: Kinematic-aware Human Motion Understanding and Generation">
+  <meta name="keywords" content="motion generation, motion representation, motion editing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">KinMo: Kinematic-aware Human Motion Understanding and Generation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Arxiv 2024
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/---------(Anonymous)"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Dataset (coming soon!)</span>
+                  </a>
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <img src="./static/images/teaser.png"/>
+      <p>
+        We present <b>KinMo</b>, a method designed for fine-grained motion understanding for (a) efficient motion retrieval based on text descriptions, text-aligned motion (b) generation and (c) editing, and (d) trajectory control on local kinematic body parts.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Controlling human motion based on text descriptions presents an important challenge in computer vision. Traditional approaches often rely on holistic action descriptions for motion synthesis, which struggle to capture subtle movements of local body parts. This limitation restricts the ability to isolate and manipulate specific movements. To address this, we propose a novel motion representation that decomposes motion into distinct body joint group movements and interactions from a kinematic perspective. We design an automatic dataset collection pipeline that enhances the existing text-motion benchmark by incorporating fine-grained local joint-group motion and interaction descriptions. To bridge the gap between text and motion domains, we introduce a hierarchical motion semantics approach that progressively fuses joint-level interaction information into the global action-level semantics for modality alignment. With this hierarchy, we introduce a coarse-to-fine motion synthesis procedure for various generation and editing downstream applications. Our quantitative and qualitative experiments demonstrate that the proposed formulation enhances text-motion retrieval by improving joint-spatial understanding, and enables more precise joint-motion generation and control.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+  
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="text-align: center;">Method</h2>
+    <div class="hero-body">
+        <img src="./static/images/pipeline.png"/>
+      <p><b>Overview of KinMo</b>. The pipeline steps include three components: <b>(1)</b> semi-supervised dataset annotation with LLMs; <b>(2)</b> hierarchical text-motion alignment for fine-grained motion understanding; <b>(3)</b> coarse-to-fine motion generation for downstream applications.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Demo Video</h2>
+      <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/KinMo-Demo.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      <!-- </div> -->
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+
+
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Motion Generation Comparisons</h2>
+
+        <div class="content">
+          <div class="columns is-centered">
+            <!-- Left Video -->
+            <div class="column is-half has-text-centered">
+              <div style="height:75px;"><p><i>A person holds their arms up as if holding a dance partner's hand and back, then dances in a square pattern.</i></p></div>
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="./static/videos/partner_dance_square.mp4" type="video/mp4">
+              </video>
+            </div>
+            
+            <!-- Left Video -->
+            <div class="column is-half has-text-centered">
+              <div style="height:75px;"><p><i>A person who is standing with his hands by his sides, crosses his arms, then slightly adjusts his arms in the crossed position, then drops his arms to his original position.</i></p></div>
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="./static/videos/cross_arms.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <div class="columns is-centered">
+            <div class="column is-half has-text-centered">
+              <div style="height:75px;"><p><i>A man leans forward to pick up an object slightly to his right, and places it down slightly to his left.</i></p></div>
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="./static/videos/object_left_to_right.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column is-half has-text-centered">
+              <div style="height:75px;"><p><i>A man is dancing, jumping from side to side waving his arms above his head.</i></p></div>
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="./static/videos/dance_handwave.mp4" type="video/mp4">
+              </video>
+            </div>
+            
+          </div>
+          <div class="columns is-centered">
+            <!-- Left Video -->
+            <div class="column is-half has-text-centered">
+              <div style="height:75px;"><p><i>A man stretches his arms out to the side shoulder length, then brings them in front of him with elbow slightly bent.</i></p></div>
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="./static/videos/stretch_side_to_front.mp4" type="video/mp4">
+              </video>
+            </div>
+            
+            <!-- Middle Video -->
+            <div class="column is-half has-text-centered">
+              <div style="height:75px;"><p><i>A person looks for something on the ground with right hand.</i></p></div>
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="./static/videos/ground_search_right_hand.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <h2 class="content has-text-centered">
+        We compare our method with <a href="https://exitudio.github.io/MMM-page/">MMM</a>, <a href="https://ericguo5513.github.io/momask/">MoMask</a> and <a href="https://mathis.petrovich.fr/stmc/">STMC</a>. Our method achieves natural movements closely aligned with the text descriptions, even with long and complex text descriptions. The static texture on the meshes is randomly chosen for better visualization and is not part of our method output.
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">  
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Text-to-Motion Generation</h2>
+          <!-- <p><b><font face="verdana">the generated motion is in <font color="#f5a623">orange</font></font></b></p> -->
+          <div class="content">
+            <div class="columns is-centered">
+              <!-- Left Video -->
+              <div class="column is-one-third has-text-centered">
+                <div style="height:75px;"><p><i>A person quickly extends one hand at a time, usually alternating between right and left.</i></p></div>
+                <video poster="" playsinline autoplay muted loop style="width: 100%; max-width: 300px;">
+                  <source src="./static/videos/alternating_hands.mp4" type="video/mp4">
+                </video>
+              </div>
+              
+              <!-- Middle Video -->
+              <div class="column is-one-third has-text-centered">
+                <div style="height:75px;"><p><i>A man is walking up the stairs while holding the railing with their left hand.</i></p></div>
+                <video poster="" playsinline autoplay muted loop style="width: 100%; max-width: 300px;">
+                  <source src="./static/videos/walk_stairs.mp4" type="video/mp4">
+                </video>
+              </div>
+              
+              <!-- Right Video -->
+              <div class="column is-one-third has-text-centered">
+                <div style="height:75px;"><p><i>A person raises his right arm up in front of his face, and holds it there for a second before putting his arm back down.</i></p></div>
+                <video poster="" playsinline autoplay muted loop style="width: 100%; max-width: 300px;">
+                  <source src="./static/videos/right_arm_raise.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            
+
+
+
+            <!-- <div class="columns is-centered">
+              <div class="column is-one-third has-text-centered">
+                <div style="height:100px;"><p><i>The person quickly extends one hand at a time, usually alternating between right and left.</i></p></div>
+                <video poster="" playsinline autoplay muted loop style="width: 100%; max-width: 300px;">
+                  <source src="./static/videos/t2m4.mp4" type="video/mp4">
+                </video>
+              </div>
+              
+              <div class="column is-one-third has-text-centered">
+                <div style="height:100px;"><p><i>A person who is standing with his hands by his sides, crosses his arms, then slightly adjusts his arms in the crossed position, then drops his arms to his original position.</i></p></div>
+                <video poster="" playsinline autoplay muted loop style="width: 100%; max-width: 300px;">
+                  <source src="./static/videos/t2m5.mp4" type="video/mp4">
+                </video>
+              </div>
+              
+              <div class="column is-one-third has-text-centered">
+                <div style="height:100px;"><p><i>The person walks forward a few steps, then reaches the hands toward the ground and back up again to turn around and walk.</i></p></div>
+                <video poster="" playsinline autoplay muted loop style="width: 100%; max-width: 300px;">
+                  <source src="./static/videos/t2m6.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div> -->
+
+          </div>
+          <h2 class="content has-text-centered">
+            We show more visual results of our motion generation based on text descriptions. Our method performs accurate kinematic body-part control, like <i>left hand</i>, <i>right arm</i>, <i>up</i>, <i>down</i> etc.
+        </div>
+      </div>    
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Text-Motion Editing</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <!-- First Pair -->
+        <div class="item">
+          <div class="columns is-centered">
+            <!-- Original Video -->
+            <div class="column is-half">
+              <div class="has-text-centered mb-4">
+                <p class="subtitle is-6"><font color="blue">Original</font>: <i>A person takes a couple of steps, then pivots on <font color="blue">left leg</font> to turn around and walks back.</i></p>
+              </div>
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="static/videos/edit-2-orig.mp4" type="video/mp4">
+              </video>
+            </div>
+            <!-- Edited Video -->
+            <div class="column is-half">
+              <div class="has-text-centered mb-4">
+                <p class="subtitle is-6"><font color="red">Edited</font>: <i>A person takes a couple of steps, then pivots on <font color="red">right leg</font> to turn around and walks back.</i></p>
+              </div>
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="static/videos/edit-2-new.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Pair -->
+        <div class="item">
+          <div class="columns is-centered">
+            <!-- Original Video -->
+            <div class="column is-half">
+              <div class="has-text-centered mb-4">
+                <p class="subtitle is-6"><font color="blue">Original</font>: <i>A person leans his upper body <font color="blue">forward with both arms behind him</font>, trying to balance himself.</i></p>
+              </div>
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="static/videos/edit-3-orig.mp4" type="video/mp4">
+              </video>
+            </div>
+            <!-- Edited Video -->
+            <div class="column is-half">
+              <div class="has-text-centered mb-4">
+                <p class="subtitle is-6"><font color="red">Edited</font>: <i>A person leans his upper body <font color="red">and steps forward</font>, trying to balance himself.</i></p>
+              </div>
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="static/videos/edit-3-new.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third Pair -->
+        <div class="item">
+          <div class="columns is-centered">
+            <!-- Original Video -->
+            <div class="column is-half">
+              <div class="has-text-centered mb-4">
+                <p class="subtitle is-6"><font color="blue">Original</font>: <i>A person walks forward fast, <font color="blue">uses right hand to reach forward</font>, then turns around and walks back.</i></p>
+              </div>
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="static/videos/edit-1-orig.mp4" type="video/mp4">
+              </video>
+            </div>
+            <!-- Edited Video -->
+            <div class="column is-half">
+              <div class="has-text-centered mb-4">
+                <p class="subtitle is-6"><font color="red">Edited</font>: <i>A person walks forward fast, <font color="red">then squats down to pick something up</font>, then turns around and walks back.</i></p>
+              </div>
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="static/videos/edit-1-new.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <h2 class="content has-text-centered mt-4">
+        We can re-enact the same character by editing the text descriptions to generate different gestures.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Motion Trajectory Control</h2>
+      <center><div id="results-carousel" class="carousel results-carousel" style="width:500px;">
+        <div class="item item-video1">
+          <div class="has-text-centered mb-4">
+            <p class="subtitle is-6">The man is standing and lost his balance, almost fell but caught himeself.</p>
+          </div>
+          <video poster="" id="video1" autoplay controls muted loop style="width:100%">
+            <source src="static/videos/traj1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <div class="has-text-centered mb-4">
+            <p class="subtitle is-6">The man is walking with arms at side.</p>
+          </div>
+          <video poster="" id="video2" autoplay controls muted loop style="width:100%">
+            <source src="static/videos/traj2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <div class="has-text-centered mb-4">
+            <p class="subtitle is-6">The man first run quickly and slow down his pace.</p>
+          </div>
+          <video poster="" id="video3" autoplay controls muted loop style="width:100%">
+            <source src="static/videos/traj3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <div class="has-text-centered mb-4">
+            <p class="subtitle is-6">The man crouches and punches the air with his right hand.</p>
+          </div>
+          <video poster="" id="video3" autoplay controls muted loop style="width:100%">
+            <source src="static/videos/traj4.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <div class="has-text-centered mb-4">
+            <p class="subtitle is-6">The man crouches and punches the air with his left hand.</p>
+          </div>
+          <video poster="" id="video3" autoplay controls muted loop style="width:100%">
+            <source src="static/videos/traj5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div></center>
+      <h2 class="content has-text-centered mt-4">
+        We can control any joint motions by providing trajectory during motion generation.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Ablation Study</h2>
+      <div class="column has-text-centered">
+        <div style="height:100px;"><p><i>A man bends his knees in a squatting motion while holding a bar over his shoulders with both hands.</i></p></div>
+        <video poster="" playsinline autoplay controls muted loop height="100%">
+          <source src="./static/videos/ablation.mp4" type="video/mp4">
+        </video>
+      </div>
+      <h2 class="content has-text-centered mt-4">We generate motion based on (a) only global
+semantic, (b) global with joint semantic, and (c) global, joint, and interaction semantics, compared with (d) ground truth, to show the importance of our hierarchical text-motion alignment.</h2>
+    </div>
+  </div>
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code></code>@misc{
+     Arxiv 2024
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer" style="padding-top: 6px; padding-bottom: 6px;">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Our website template is a modified version of <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. Thanks to the authors' contribution.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
