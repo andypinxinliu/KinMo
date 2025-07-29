@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,10 +64,47 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">KinMo: Kinematic-aware Human Motion Understanding and Generation</h1>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block", style="color:#22171e7b";><b>ICCV 2025</b></span>
+          </div>
+          <br>
+          <table align=center width="100%">
+            <tr>
+                    <td align=center width="20%">
+              <center>
+                <span style="font-size:20px"><a target="_blank" href="https://zpf0117b2.github.io/feifei.github.io/main/">Pengfei Zhang</a><sup>1*</sup></span>
+                </center>
+                </td>
+                    <td align=center width="20%">
+              <center>
+                <span style="font-size:20px"><a target="_blank" href="https://andypinxinliu.github.io/">Pinxin Liu</a><sup>2*</sup></span>
+                </center>
+                </td>
+            <td align=center width="20%">
+              <center>
+                <span style="font-size:20px"><a target="_blank">Hyeongwoo Kim</a><sup>3</sup></span>
+                </center>
+                </td>
+              <td align=center width="20%">
+              <center>
+                <span style="font-size:20px"><a target="_blank">Pablo Garrido</a><sup>4</sup></span>
+                </center>
+                </td>
+                    <td align=center width="20%">
+              <center>
+                <span style="font-size:20px"><a target="_blank" href="https://bindita.github.io/">Bindita Chaudhuri</a><sup>4</sup></span>
+                </center>
+                </td>
+          </table>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              ICCV 2025
-            </span>
+          <sup>*</sup><small>equal contribution</small>
+          </div>
+          <br>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of California, Irvine</span> &nbsp
+            <span class="author-block"><sup>2</sup>University of Rochester</span> &nbsp
+            <span class="author-block"><sup>3</sup>Imperial College, London</span> &nbsp
+            <span class="author-block"><sup>4</sup>FlawlessAI</span>
           </div>
 
           <div class="column has-text-centered">
@@ -82,20 +120,9 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Code Link. -->
+              <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/---------(Anonymous)"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/---------(Anonymous)"
+                <a href="https://drive.google.com/file/d/1hPZyYS-pBy7jBPCrMeI-FkL9qyupcf0h/view?usp=sharing"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -135,7 +162,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Controlling human motion based on text descriptions presents an important challenge in computer vision. Traditional approaches often rely on holistic action descriptions for motion synthesis, which struggle to capture subtle movements of local body parts. This limitation restricts the ability to isolate and manipulate specific movements. To address this, we propose a novel motion representation that decomposes motion into distinct body joint group movements and interactions from a kinematic perspective. We design an automatic dataset collection pipeline that enhances the existing text-motion benchmark by incorporating fine-grained local joint-group motion and interaction descriptions. To bridge the gap between text and motion domains, we introduce a hierarchical motion semantics approach that progressively fuses joint-level interaction information into the global action-level semantics for modality alignment. With this hierarchy, we introduce a coarse-to-fine motion synthesis procedure for various generation and editing downstream applications. Our quantitative and qualitative experiments demonstrate that the proposed formulation enhances text-motion retrieval by improving joint-spatial understanding, and enables more precise joint-motion generation and control.
+            Current human motion synthesis frameworks rely on global action descriptions, creating a modality gap that limits both motion understanding and generation capabilities. A single coarse description, such as <i>run</i>, fails to capture details like variations in speed, limb positioning, and kinematic dynamics, leading to ambiguities between text and motion modalities.  To address this challenge, we introduce <b>KinMo</b>, a unified framework built on a hierarchical describable motion representation that extends beyond global actions by incorporating kinematic group movements and their interactions. We design an automated annotation pipeline to generate high-quality, fine-grained descriptions for this decomposition, resulting in the KinMo dataset and offering a scalable and cost-efficient solution for dataset enrichment. To leverage these structured descriptions, we propose Hierarchical Text-Motion Alignment that progressively integrates additional motion details, thereby improving semantic motion understanding. Furthermore, we introduce a coarse-to-fine motion generation procedure to leverage enhanced spatial understanding to improve motion synthesis. Experimental results show that KinMo significantly improves motion understanding, demonstrated by enhanced text-motion retrieval performance and enabling more fine-grained motion generation and editing capabilities.
           </p>
         </div>
       </div>
@@ -479,15 +506,11 @@ semantic, (b) global with joint semantic, and (c) global, joint, and interaction
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code></code>@misc{zhang2024kinmokinematicawarehumanmotion,
-      title={KinMo: Kinematic-aware Human Motion Understanding and Generation}, 
+    <pre><code></code>@inproceedings{kinmo2025kinematicawarehumanmotion,
+      title={{KinMo: Kinematic-aware Human Motion Understanding and Generation}},
       author={Pengfei Zhang and Pinxin Liu and Hyeongwoo Kim and Pablo Garrido and Bindita Chaudhuri},
-      year={2024},
-      eprint={2411.15472},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2411.15472}, 
-     
+      booktitle={IEEE International Conference on Computer Vision},
+      year={2025},
 }</code></pre>
   </div>
 </section>
