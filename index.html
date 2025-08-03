@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,19 +81,19 @@
                 <span style="font-size:20px"><a target="_blank" href="https://andypinxinliu.github.io/">Pinxin Liu</a><sup>2*</sup></span>
                 </center>
                 </td>
-            <td align=center width="20%">
+                <td align=center width="20%">
               <center>
-                <span style="font-size:20px"><a target="_blank">Hyeongwoo Kim</a><sup>3</sup></span>
+                <span style="font-size:20px"><a target="_blank" href="https://www.linkedin.com/in/pablo-garrido-485472169/">Pablo Garrido</a><sup>4</sup></span>
                 </center>
                 </td>
               <td align=center width="20%">
               <center>
-                <span style="font-size:20px"><a target="_blank">Pablo Garrido</a><sup>4</sup></span>
+                <span style="font-size:20px"><a target="_blank" href="https://scholar.google.com/citations?user=lDekV6IAAAAJ&hl=en&oi=ao">Hyeongwoo Kim</a><sup>3</sup></span>
                 </center>
                 </td>
-                    <td align=center width="20%">
+              <td align=center width="20%">
               <center>
-                <span style="font-size:20px"><a target="_blank" href="https://bindita.github.io/">Bindita Chaudhuri</a><sup>4</sup></span>
+                <span style="font-size:20px"><a target="_blank" href="https://bindita.github.io/">Bindita Chaudhuri</a><sup>4&dagger;</sup></span>
                 </center>
                 </td>
           </table>
@@ -104,13 +105,22 @@
             <span class="author-block"><sup>1</sup>University of California, Irvine</span> &nbsp
             <span class="author-block"><sup>2</sup>University of Rochester</span> &nbsp
             <span class="author-block"><sup>3</sup>Imperial College, London</span> &nbsp
-            <span class="author-block"><sup>4</sup>FlawlessAI</span>
+            <span class="author-block"><sup>4</sup>Flawless AI</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               
               <div class="publication-links">
+                <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2411.15472"
                    class="external-link button is-normal is-rounded is-dark">
@@ -125,7 +135,7 @@
                 <a href="https://drive.google.com/file/d/1hPZyYS-pBy7jBPCrMeI-FkL9qyupcf0h/view?usp=sharing"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fab fa-github"></i>
+                      <i class="fas fa-database"></i>
                   </span>
                   <span>Dataset</span>
                   </a>
@@ -162,7 +172,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Current human motion synthesis frameworks rely on global action descriptions, creating a modality gap that limits both motion understanding and generation capabilities. A single coarse description, such as <i>run</i>, fails to capture details like variations in speed, limb positioning, and kinematic dynamics, leading to ambiguities between text and motion modalities.  To address this challenge, we introduce <b>KinMo</b>, a unified framework built on a hierarchical describable motion representation that extends beyond global actions by incorporating kinematic group movements and their interactions. We design an automated annotation pipeline to generate high-quality, fine-grained descriptions for this decomposition, resulting in the KinMo dataset and offering a scalable and cost-efficient solution for dataset enrichment. To leverage these structured descriptions, we propose Hierarchical Text-Motion Alignment that progressively integrates additional motion details, thereby improving semantic motion understanding. Furthermore, we introduce a coarse-to-fine motion generation procedure to leverage enhanced spatial understanding to improve motion synthesis. Experimental results show that KinMo significantly improves motion understanding, demonstrated by enhanced text-motion retrieval performance and enabling more fine-grained motion generation and editing capabilities.
+            Current human motion synthesis frameworks rely on global action descriptions, creating a modality gap that limits both motion understanding and generation capabilities. A single coarse description, such as <i>run</i>, fails to capture details such as variations in speed, limb positioning, and kinematic dynamics, leading to ambiguities between text and motion modalities. To address this challenge, we introduce <b>KinMo</b>, a unified framework built on a hierarchical describable motion representation that extends beyond global actions by incorporating kinematic group movements and their interactions. We design an automated annotation pipeline to generate high-quality, fine-grained descriptions for this decomposition, resulting in the KinMo dataset and offering a scalable and cost-efficient solution for dataset enrichment. To leverage these structured descriptions, we propose Hierarchical Text-Motion Alignment that progressively integrates additional motion details, thereby improving semantic motion understanding. Furthermore, we introduce a coarse-to-fine motion generation procedure to leverage enhanced spatial understanding to improve motion synthesis. Experimental results show that KinMo significantly improves motion understanding, demonstrated by enhanced text-motion retrieval performance and enabling more fine-grained motion generation and editing capabilities.
           </p>
         </div>
       </div>
@@ -508,8 +518,8 @@ semantic, (b) global with joint semantic, and (c) global, joint, and interaction
     <h2 class="title">BibTeX</h2>
     <pre><code></code>@inproceedings{kinmo2025kinematicawarehumanmotion,
       title={{KinMo: Kinematic-aware Human Motion Understanding and Generation}},
-      author={Pengfei Zhang and Pinxin Liu and Hyeongwoo Kim and Pablo Garrido and Bindita Chaudhuri},
-      booktitle={IEEE International Conference on Computer Vision},
+      author={Pengfei Zhang and Pinxin Liu and Pablo Garrido and Hyeongwoo Kim and Bindita Chaudhuri},
+      booktitle={IEEE/CVF International Conference on Computer Vision},
       year={2025},
 }</code></pre>
   </div>
